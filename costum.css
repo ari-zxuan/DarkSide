@@ -1,0 +1,121 @@
+.mod-card {
+    max-width: 700px;
+    background: linear-gradient(
+        180deg,
+        #10281e 0%,
+        #0c1f17 100%
+    );
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 20px;
+    color: #cfd6d2;
+}
+
+.mod-header {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.mod-icon img {
+    width: 56px;
+    height: 56px;
+    border-radius: 10px;
+    background: #151a17;
+}
+
+.mod-title h1 {
+    font-size: 20px;
+    margin: 0 0 4px 0;
+    color: #e4f0e8;
+    font-weight: 600;
+}
+
+.mod-tags {
+    display: flex;
+    gap: 6px;
+}
+
+.tag {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 14px;
+    background: #1a3f31;
+    color: var(--green-main);
+    border: 1px solid #2e6b55;
+}
+
+.mod-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 18px;
+    font-size: 13px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed #1f2f26;
+    padding-bottom: 4px;
+}
+
+.info-row span {
+    color: #6fe3a1;
+}
+
+.info-row p {
+    margin: 0;
+    color: #cfd6d2;
+}
+
+.mod-features h3 {
+    font-size: 14px;
+    margin: 0 0 6px 0;
+    color: #9be6bf;
+}
+
+.mod-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mod-features li {
+    font-size: 13px;
+    margin-bottom: 4px;
+    font-family: monospace;
+    color: #c6d4cc;
+}
+
+.mod-download {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 9px 26px;
+    font-size: 13px;
+    background: #184735;
+    color: var(--green-main);
+    text-decoration: none;
+    border-radius: 22px;
+    border: 1px solid #2e6b55;
+    transition: 0.25s;
+}
+
+.download-btn:hover {
+    background: #1f5e45;
+    color: #c6d4cc;
+}
+
+.download-btn.disabled {
+    background: #1a2a22;
+    color: #7fae9a;
+    border: 1px solid #2f4f40;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.85;
+}
