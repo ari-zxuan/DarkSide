@@ -1,22 +1,17 @@
-const textEl = document.getElementById('text')
-const speedEl = document.getElementById('speed')
-const text = 'We Love Programming!'
-let idx = 1
-let speed = 300 / speedEl.value
+const boxesContainer = document.getElementById('boxes')
+const btn = document.getElementById('btn')
 
-writeText()
+btn.addEventListener('click', () => boxesContainer.classList.toggle('big'))
 
-function writeText() {
-    textEl.innerText = text.slice(0, idx)
-
-    idx++
-
-    if(idx > text.length) {
-        idx = 1
+function createBoxes() {
+  for (let i = 0; i < 4; i++) {
+    for (let j = 0; j < 4; j++) {
+      const box = document.createElement('div')
+      box.classList.add('box')
+      box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`
+      boxesContainer.appendChild(box)
     }
-
-    setTimeout(writeText, speed)
+  }
 }
 
-
-speedEl.addEventListener('input', (e) => speed = 300 / e.target.value)
+createBoxes()
